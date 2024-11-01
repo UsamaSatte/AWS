@@ -1,0 +1,13 @@
+<powershell>
+# Install IIS and Web Management Tools.
+Import-Module ServerManager
+install-windowsfeature web-server
+echo "Welcome to Devops TechLab for AWS Cloud Training." > C:\inetpub\wwwroot\index.html 
+</powershell>
+
+
+#!/bin/bash
+yum install httpd -y
+echo "Welcome to Devops TechLab for AWS Cloud Training" > /var/www/html/index.html
+service httpd start 
+chkconfig httpd on
